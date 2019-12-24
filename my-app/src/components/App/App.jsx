@@ -81,7 +81,7 @@ class App extends Component {
   };
 
   handleOpenModal = ({ target }) => {
-    this.setState({ isOpenModal: true, openImg: target.dataset.largeImg });
+    this.setState({ isOpenModal: true, openImg: target.dataset.largeimg });
   };
 
   handleCloseModal = () => {

@@ -12,7 +12,7 @@ const ImageGalleryItem = ({ item, onClick }) => {
     >
       <img
         src={smallImg}
-        data-largeImg={largeImg}
+        data-largeimg={largeImg}
         alt={alt}
         className={styles.ImageGalleryItemImage}
       />
