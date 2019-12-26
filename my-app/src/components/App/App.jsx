@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import uuid from 'uuid';
 import styles from './App.module.css';
 import * as API from '../../services/api';
 import ImageGallery from '../ImageGallery/ImageGallery';
@@ -90,7 +91,7 @@ class App extends Component {
 
   render() {
     const { items, isLoading, isOpenModal, openImg } = this.state;
-    const { id } = items;
+
     return (
       <div className={styles.app}>
         <SearchBar onSubmit={this.handleSearch} />
@@ -100,7 +101,7 @@ class App extends Component {
             <ImageGallery>
               {items.map(item => (
                 <ImageGalleryItem
-                  key={id}
+                  key={uuid()}
                   item={item}
                   onClick={this.handleOpenModal}
                 />

@@ -3,9 +3,10 @@ import PropTypes from 'prop-types';
 import styles from './ImageGalleryItem.module.css';
 
 const ImageGalleryItem = ({ item, onClick }) => {
-  const { smallImg, largeImg, alt } = item;
+  const { smallImg, largeImg, alt, key } = item;
   return (
     <li
+      key={key}
       role="presentation"
       onClick={onClick}
       className={styles.imageGalleryItem}
@@ -14,7 +15,7 @@ const ImageGalleryItem = ({ item, onClick }) => {
         src={smallImg}
         data-largeimg={largeImg}
         alt={alt}
-        className={styles.ImageGalleryItemImage}
+        className={styles.imageGalleryItemImage}
       />
     </li>
   );
